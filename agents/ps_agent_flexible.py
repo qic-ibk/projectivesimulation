@@ -71,7 +71,7 @@ class FlexiblePSAgent(object):
         else:
             raise TypeError('Observation is of a type not supported as dictionary key. You may be able to add a way of handling this type.')
         
-        if dict_key not in self.percept_dict.keys():
+        if dict_key not in self.percept_dict:
             self.percept_dict[dict_key] = self.num_percepts
             self.num_percepts += 1
             #add column to hmatrix, gmatrix
